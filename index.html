@@ -16,14 +16,22 @@
 
 
   <script type="text/babel">
-    const root = document.getElementById(root)
+    const root = document.getElementById("root")
 
-    const element = React.createElement('h1'{
-      className : 'greeting'
-    },
-    'Hello')
+    function ShowNama({nama}){
+      return <h2>Nama anda {nama ? nama : "Belum Ada Nama"}</h2>
+    }
+
+    const element = (
+      <>
+      <ShowNama />
+      <ShowNama nama="Bagus Fary Ananta" />
+      </>
+    );
+    
 
     ReactDOM.render(element,root)
+
   </script>
 </body>
 </html>
